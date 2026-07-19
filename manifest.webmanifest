@@ -1,0 +1,10 @@
+{
+  "name": "齐齐专用象棋闯关",
+  "short_name": "齐齐象棋",
+  "description": "齐齐制作的中国象棋杀棋闯关练习",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f6eee2",
+  "theme_color": "#781d18",
+  "lang": "zh-CN"
+}
