@@ -23,6 +23,10 @@
       <button id="ai-mode" type="button">人机对弈</button>
     </nav>
 
+    <div class="quick-tools">
+      <button id="sound-toggle" type="button" aria-pressed="true">🔊 声音开</button>
+    </div>
+
     <section id="progress-card" class="progress-card" aria-label="闯关进度">
       <div class="progress-copy">
         <span id="level-label">第 1 / 222 关</span>
@@ -46,6 +50,7 @@
     </section>
 
     <p id="message" class="message" aria-live="assertive">轮到红方，请选择棋子。</p>
+    <p id="last-move" class="last-move hidden" aria-live="polite"></p>
 
     <div id="puzzle-actions" class="actions">
       <button id="hint-button" class="secondary" type="button">💡 提示</button>

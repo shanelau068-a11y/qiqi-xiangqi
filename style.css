@@ -11,6 +11,8 @@ h1{margin:4px 0 0;font-family:STKaiti,KaiTi,serif;font-size:clamp(27px,6vw,38px)
 .mode-switch{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:20px 0 12px;padding:5px;background:#e2ceb2;border-radius:15px}
 .mode-switch button{border:0;border-radius:11px;padding:11px;background:transparent;color:#79563d;font-weight:900}
 .mode-switch button.active{background:#fffaf2;color:var(--red);box-shadow:0 3px 10px #66351720}
+.quick-tools{display:flex;justify-content:flex-end;margin:-4px 2px 8px}
+.quick-tools button{border:1px solid #d9b98f;border-radius:99px;background:#fff9ef;color:#70452c;padding:7px 12px;font-size:13px;font-weight:800}
 .progress-card,.knowledge-card{background:#fffdf9;border:1px solid #ead6b6;border-radius:18px;box-shadow:0 7px 22px #6c351518}
 .progress-card{margin:12px 0 22px;padding:15px 17px}
 .progress-copy strong{color:#a85f13}
@@ -30,11 +32,16 @@ h1{margin:4px 0 0;font-family:STKaiti,KaiTi,serif;font-size:clamp(27px,6vw,38px)
 .piece{width:9.2%;aspect-ratio:1;border:2px solid currentColor;background:radial-gradient(circle at 35% 28%,#fff7dd,#d5aa61 70%);box-shadow:inset 0 0 0 2px #f7db9a,0 3px 5px #3b180f66;font-family:STKaiti,KaiTi,serif;font-weight:900;font-size:clamp(17px,5.4vw,32px);line-height:1}
 .piece.red{color:#a4211e}.piece.black{color:#25201e}
 .piece.selected{outline:4px solid #f6d05a;z-index:3;transform:translate(-50%,-50%) scale(1.08)}
+.piece.last-moved{outline:4px solid #ffcf3f;z-index:2;animation:lastGlow 1.15s ease-in-out 2}
 .piece.hinted{animation:pulse 1s infinite}
+.last-square{position:absolute;width:9.7%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;pointer-events:none;z-index:1}
+.last-square.from{border:4px dashed #fff1a5;background:#ad6f2438}
+.last-square.to{border:4px solid #ffdf52;background:#ffed7848;box-shadow:0 0 15px #fff176}
 .target{width:5.5%;aspect-ratio:1;border:0;background:#3c872bd9;box-shadow:0 0 0 5px #e8f6df9c;z-index:4}
 .target.capture{background:#c62b25}
 .message{min-height:26px;text-align:center;font-weight:800;color:#6f4f3c;margin:16px 0 10px}
 .message.success{color:#19703c}.message.error{color:#b02c25}
+.last-move{margin:-4px auto 12px;padding:9px 12px;border-radius:10px;background:#fff5d8;color:#71431f;text-align:center;font-size:14px;font-weight:800}
 .actions{margin:8px 0 20px}
 .actions button,.actions select{border-radius:12px;padding:12px 15px;font-weight:800}
 .secondary{background:#fff8ec;color:#73432b;border:1px solid #dfc196}
@@ -49,4 +56,5 @@ footer{margin-top:22px;color:#8a6b56;font-size:12px}
 footer button{border:0;background:transparent;color:#8a6b56;text-decoration:underline;padding:8px 0}
 .hidden{display:none!important}
 @keyframes pulse{50%{filter:drop-shadow(0 0 8px #ffdb48);transform:translate(-50%,-50%) scale(1.12)}}
+@keyframes lastGlow{50%{filter:drop-shadow(0 0 9px #ffe054);transform:translate(-50%,-50%) scale(1.1)}}
 @media(max-width:390px){.shell{padding:18px 10px 30px}.board-card{padding:8px}.actions{gap:7px}.actions button,.actions select{padding:11px 9px;font-size:14px}}
