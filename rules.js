@@ -28,5 +28,8 @@ const XiangqiRules=(()=>{
   const move=(pieces,piece,to)=>pieces.filter(p=>!(p.row===to.row&&p.col===to.col)).map(p=>p===piece?{...p,row:to.row,col:to.col}:p);
   function inCheck(color,pieces){const general=pieces.find(p=>p.type==='G'&&p.color===color);if(!general)return true;return pieces.some(p=>p.color!==color&&pseudoMoves(p,pieces).some(m=>m.row===general.row&&m.col===general.col));}
   function legalMoves(piece,pieces){return pseudoMoves(piece,pieces).filter(to=>!inCheck(piece.color,move(pieces,piece,to)));}
-  return{legalMoves,move,at};
+  function allMoves(color,pieces){
+    return pieces.filter(p=>p.color===color).flatMap(piece=>legalMoves(piece,pieces).map(to=>({piece,to})));
+  }
+  return{legalMoves,allMoves,move,at,inCheck};
 })();

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
   <meta name="theme-color" content="#781d18">
-  <title>齐齐专用象棋闯关</title>
+  <title>齐齐专用象棋</title>
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -13,22 +13,27 @@
     <header class="topbar">
       <div>
         <p class="eyebrow">QI QI XIANGQI LAB</p>
-        <h1>齐齐专用象棋闯关</h1>
+        <h1>齐齐专用象棋</h1>
       </div>
-      <span class="maker-mark">齐齐制作</span>
+      <span class="maker-mark">齐齐专用</span>
     </header>
 
-    <section class="progress-card" aria-label="闯关进度">
+    <nav class="mode-switch" aria-label="练习模式">
+      <button id="puzzle-mode" class="active" type="button">闯关题库</button>
+      <button id="ai-mode" type="button">人机对弈</button>
+    </nav>
+
+    <section id="progress-card" class="progress-card" aria-label="闯关进度">
       <div class="progress-copy">
-        <span id="level-label">第 1 / 77 关</span>
+        <span id="level-label">第 1 / 222 关</span>
         <strong id="score-label">🏅 0</strong>
       </div>
       <div class="progress-track"><div id="progress-bar"></div></div>
     </section>
 
     <section class="lesson" aria-live="polite">
-      <span class="tag" id="level-tag">第一章 · 一步杀</span>
-      <h2 id="puzzle-title">红方先走，一步将杀</h2>
+      <span class="tag" id="level-tag">第一章 · 杀棋训练</span>
+      <h2 id="puzzle-title">红方先走，找出妙手</h2>
       <p id="puzzle-text">选择红方棋子，再选择落点。</p>
     </section>
 
@@ -42,19 +47,29 @@
 
     <p id="message" class="message" aria-live="assertive">轮到红方，请选择棋子。</p>
 
-    <div class="actions">
+    <div id="puzzle-actions" class="actions">
       <button id="hint-button" class="secondary" type="button">💡 提示</button>
       <button id="retry-button" class="secondary" type="button">↻ 重来</button>
       <button id="next-button" class="primary" type="button" disabled>下一关 →</button>
     </div>
 
+    <div id="ai-actions" class="actions ai-actions hidden">
+      <label for="ai-level">电脑难度</label>
+      <select id="ai-level" aria-label="电脑难度">
+        <option value="easy">轻松</option>
+        <option value="medium" selected>认真</option>
+        <option value="hard">挑战</option>
+      </select>
+      <button id="new-game" class="primary" type="button">新对局</button>
+    </div>
+
     <section class="knowledge-card">
       <h3>齐齐小课堂</h3>
-      <p id="tip-text">一步杀：这一手落下后，对方的将无处可逃。</p>
+      <p id="tip-text">先观察对方将的逃路，再找车、炮、马的连续进攻。</p>
     </section>
 
     <footer>
-      <strong>齐齐专用 · 齐齐制作</strong>
+      <strong>齐齐专用</strong>
       <button id="reset-progress" type="button">清空闯关记录</button>
     </footer>
   </main>
@@ -63,7 +78,18 @@
   <script src="puzzles-3.js"></script>
   <script src="puzzles-4.js"></script>
   <script src="puzzles-5.js"></script>
+  <script src="puzzles-6.js"></script>
+  <script src="puzzles-7.js"></script>
+  <script src="puzzles-8.js"></script>
+  <script src="puzzles-9.js"></script>
+  <script src="puzzles-10.js"></script>
+  <script src="puzzles-11.js"></script>
+  <script src="puzzles-12.js"></script>
+  <script src="puzzles-13.js"></script>
+  <script src="puzzles-14.js"></script>
+  <script src="puzzles-15.js"></script>
   <script src="rules.js"></script>
+  <script src="ai.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
