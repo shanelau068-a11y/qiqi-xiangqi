@@ -1,5 +1,10 @@
 # 语齐专用象棋
 
+<!-- AI-HANDOFF-ENTRY -->
+**AI接手与运行：**[从这里开始](AI_START_HERE.md) · [安装/启动/数据说明](docs/AI_HANDOFF.md) · [实际验证结果](docs/VERIFICATION.md)。
+<!-- /AI-HANDOFF-ENTRY -->
+
+
 一个适合手机和电脑使用的中国象棋练习网页。
 
 - 内置 222 道本地杀棋题，按难度逐步练习
